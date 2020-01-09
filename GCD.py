@@ -1,3 +1,6 @@
+"""
+최대 공약수
+"""
 def gcd(a, b):
     m = min(a, b)
     for i in range(b):
