@@ -1,4 +1,6 @@
 """
+백준 2588번
+
 세 자리수의 곱은 다음과 같은 과정을 통하여 이루어진다.
         472
     x   385
@@ -17,6 +19,7 @@ num2 = int(input())
 
 
 def multiple_processing_generator(a, b):
+    """간단한 문제지만 제너레이터 연습하고자 제너레이터로 만들었다."""
     multiple_list = list(str(b))  # 입력받은 두번 째 숫자의 각각의 자릿수를 리스트로 만듬.
     index = 1  # 리스트의 인덱스
     while True:
@@ -34,9 +37,4 @@ print(next(multiple_processing))
 print(next(multiple_processing))
 print(next(multiple_processing))
 
-
-"""
-단순하고 매우 쉬운문제지만
-제네레이터를 연습할겸 사용해 보았다.
-"""
 
