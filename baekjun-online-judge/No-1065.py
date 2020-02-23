@@ -14,7 +14,6 @@ N이 주어졌을 때, 1보다 크거나 같고, N보다 작거나 같은 한수
 
 입력한 값 보다 작거나 같고 1보다 크거나 같은 수중 등차수열의 갯수를 구하기
 """
-
 number = int(input())
 
 
@@ -27,9 +26,9 @@ def count_ap(n):
             count += 1
         else:
             sum_diff = 0
+            diff = int(str_number[1]) - int(str_number[0])
             for index, value in enumerate(str_number):
                 if index > 0:
-                    diff = int(value) - int(str_number[index-1])
                     sum_diff += int(value) - int(str_number[index-1])
             if sum_diff / (number_len-1) == diff:
                 count += 1
