@@ -26,10 +26,15 @@ def count_ap(n):
             count += 1
         else:
             sum_diff = 0
+            # 첫 번째 수와 두 번째 수의 차이값
             diff = int(str_number[1]) - int(str_number[0])
             for index, value in enumerate(str_number):
                 if index > 0:
+                    # 각각의 차이값을 다 더하기
                     sum_diff += int(value) - int(str_number[index-1])
+            # 각각의 차이값 / (숫자길이 - 1 ) 가 처음에 구한 차이값과 같으면 등차수열
+            # 숫자길이로 나누는게 아니라 -1 을 하는 이유는 첫번째 차이값은 따로 구해놨기때문에
+            # 첫 번째 와 두 번째 차이값은 sum_diff 에 더하지 않기 때문
             if sum_diff / (number_len-1) == diff:
                 count += 1
     return count
