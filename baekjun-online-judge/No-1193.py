@@ -22,21 +22,21 @@ X가 주어졌을 때, X번째 분수를 구하는 프로그램을 작성하시�
 
 number = int(input())
 
-index = 1
-add = 1  #
-value = 0  # 몇 번째
+index = 1  # 증가값에 의해 더해지는 수
+add = 1  # 계차수열의 증가값
+value = 0  # 계차수열의 값과 입력한 값의 차이를 담기 위한 변수
 while True:
     if number == 1:
         print(1, '/', 1)
         break
     else:
-        add += 1
-        index += add
+        add += 1  # 2, 3, 4, 5 '''. 즉 증가값이 1 씩 올라간다
+        index += add  # 증가값을 현재값에 더한다.
 
-        if index >= number:
-            value = index - number
+        if index >= number:  # 입력한 값이 계차수열의 값보다 커졌을때.
+            value = index - number  # 입력한 숫자가 계차수열의 양쪽에서 몇번째인지 확인을 위한 변수
             if add % 2 == 0:
-                print('%d/%d' % (add-value, 1+value))
+                print('%d/%d' % (add-value, 1+value))  # 계차수열이 홀수면 left값 감소, right 증가
             else:
-                print('%d/%d' % (1+value, add-value))
+                print('%d/%d' % (1+value, add-value))  # 짝수면 그 반대.
             break
